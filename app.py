@@ -15,13 +15,13 @@ model = load_model('iris_nn_model.h5')
 def predict(model, scaler, encoder, features):
 
 # Scale the features
-scaled_features = scaler.transform(features)
+    scaled_features = scaler.transform(features)
 
 # Predict using the Neural Network model
-prediction = model.predict(scaled_features)
+    prediction = model.predict(scaled_features)
 
 # Return the class with the highest probability
-return np.argmax(prediction, axis=1)
+    return np.argmax(prediction, axis=1)
 
 # Title of the app
 st.title("Iris Flower Classifier")
